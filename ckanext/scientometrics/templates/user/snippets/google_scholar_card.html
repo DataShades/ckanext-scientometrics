@@ -1,0 +1,47 @@
+<div class="scientometrics-container scientometrics-google-scholar">
+    <div class="card mb-3">
+        <div class="card-header bg-primary text-white fw-bold">
+            <a class="text-white"
+               target="_blank"
+               href={{ "https://scholar.google.com/citations?user=" ~ metrics.author_id }}>
+                Google Scholar Metrics</a>
+        </div>
+        <div class="card-body">
+            <div class="mb-3 border-bottom pb-2">
+                <h6 class="fw-bold">Citations</h6>
+                <div class="row">
+                    <div class="col-6 text-start">All time</div>
+                    <div class="col-6 text-end">{{ metrics.citation_count }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-start">Last 5 years</div>
+                    <div class="col-6 text-end">{{ metrics.citation_count_5y }}</div>
+                </div>
+            </div>
+
+            <div class="mb-3 border-bottom pb-2">
+                <h6 class="fw-bold">h-index</h6>
+                <div class="row">
+                    <div class="col-6 text-start">All time</div>
+                    <div class="col-6 text-end">{{ metrics.h_index }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-start">Last 5 years</div>
+                    <div class="col-6 text-end">{{ metrics.h_index_5y }}</div>
+                </div>
+            </div>
+
+            <div>
+                <h6 class="fw-bold">i10-index</h6>
+                <div class="row">
+                    <div class="col-6 text-start">All time</div>
+                    <div class="col-6 text-end">{{ metrics.i10_index }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-start">Last 5 years</div>
+                    <div class="col-6 text-end">{{ metrics.i10_index_5y }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

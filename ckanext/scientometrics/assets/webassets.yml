@@ -1,0 +1,14 @@
+# scientometrics-js:
+#   filter: rjsmin
+#   output: ckanext-scientometrics/%(version)s-scientometrics.js
+#   contents:
+#     - js/scientometrics.js
+#   extra:
+#     preload:
+#       - base/main
+
+# scientometrics-css:
+#   filter: cssrewrite
+#   output: ckanext-scientometrics/%(version)s-scientometrics.css
+#   contents:
+#     - css/scientometrics.css

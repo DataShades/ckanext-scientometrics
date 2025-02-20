@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block extra_fields %}
+    {% set enabled_metrics = h.scientometrics_get_enabled_metrics() %}
+    {% for metric in enabled_metrics %}
+        {% snippet 'user/snippets/' + metric + '_field.html', form=form, data=data, errors=errors %}
+    {% endfor %}
+    {{ super() }}
+{% endblock %}

@@ -1,0 +1,2 @@
+{% set semantic_scholar_author_id = data.get("scientometrics", {}).semantic_scholar_author_id or "" %}
+{{ form.input('semantic_scholar_author_id', label=_('Semantic Scholar Author ID'), id='field-semantic-author-scholar-id', value=semantic_scholar_author_id, error=errors.semantic_scholar_author_id, placeholder=_('eg. 12345678'), classes=['control-medium'], is_required=false) }}

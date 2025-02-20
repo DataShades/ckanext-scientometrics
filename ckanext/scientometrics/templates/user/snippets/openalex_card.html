@@ -1,0 +1,32 @@
+<div class="scientometrics-container scientometrics-openalex">
+    <div class="card mb-3">
+        <div class="card-header bg-primary text-white fw-bold">
+            <a class="text-white"
+               target="_blank"
+               href={{ "https://openalex.org/" ~ metrics.author_id }}>
+                OpenAlex Metrics
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="mb-3 border-bottom pb-2 row">
+                <h6 class="fw-bold col-6 text-start" >Citations</h6>
+                <div class="col-6 text-end">{{ metrics.citation_count }}</div>
+            </div>
+
+            <div class="mb-3 border-bottom pb-2 row">
+                <h6 class="fw-bold col-6 text-start">h-index</h6>
+                <div class="col-6 text-end">{{ metrics.h_index }}</div>
+            </div>
+
+            <div class="mb-3 border-bottom pb-2 row">
+                <h6 class="fw-bold col-6 text-start">i10-index</h6>
+                <div class="col-6 text-end">{{ metrics.i10_index }}</div>
+            </div>
+
+            <div class="row">
+                <h6 class="fw-bold col-6 text-start">Papers</h6>
+                <div class="col-6 text-end">{{ metrics.paper_count }}</div>
+            </div>
+        </div>
+    </div>
+</div>

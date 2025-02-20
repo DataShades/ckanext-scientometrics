@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+{% block user_info %}
+    {{ super () }}
+    {% if h.scientometrics_show_metrics_on_user_page() %}
+        {% set enabled_metrics = h.scientometrics_get_enabled_metrics() %}
+        {% set metrics = h.scientometrics_get_user_metrics(user.id) %}
+        {% for metric in enabled_metrics %}
+            {% if metric in metrics %}
+                {% snippet 'user/snippets/' + metric + '_card.html', metrics=metrics[metric] %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

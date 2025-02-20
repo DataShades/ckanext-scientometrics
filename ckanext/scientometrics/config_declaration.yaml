@@ -1,0 +1,18 @@
+version: 1
+groups:
+  - annotation: ckanext-collection
+    options:
+      - key: ckanext.scientometrics.enabled_metrics
+        type: list
+        default: google_scholar semantic_scholar openalex
+        description: |
+            List of enabled metrics. Available metrics are:
+            - google_scholar
+            - semantic_scholar
+            - openalex
+
+      - key: ckanext.scientometrics.show_on_user_page
+        type: bool
+        default: true
+        description: |
+            Show metrics on user page in the info section.
