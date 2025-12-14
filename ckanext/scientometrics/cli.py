@@ -6,16 +6,16 @@ from ckan import model
 from ckanext.scientometrics import config
 
 __all__ = [
-    "scientometrics",
+    "scim",
 ]
 
 
 @click.group()
-def scientometrics():
+def scim():
     pass
 
 
-@scientometrics.command()
+@scim.command()
 @click.option(
     "--user-ids",
     type=str,
@@ -43,8 +43,8 @@ def update_user_metrics(user_ids: tuple, requested_sources: tuple):
         requested_sources = config.enabled_metrics()
     with click.progressbar(user_ids, label="Updating user metrics") as bar:
         for user_id in bar:
-            tk.get_action("scientometrics_update_user_metrics")(
-                {}, {"user_id": user_id, "requested_sources": requested_sources}
+            tk.get_action("scim_update_user_metrics")(
+                {"ignore_auth": True}, {"user_id": user_id, "requested_sources": requested_sources}
             )
 
     click.echo("Metrics update complete!")

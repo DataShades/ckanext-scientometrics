@@ -37,7 +37,7 @@ def include_object(
     compare_to: Any,
 ):
     if type_ == "table":
-        return object_name.startswith(name)
+        return object_name.startswith("scim_")
     return True
 
 

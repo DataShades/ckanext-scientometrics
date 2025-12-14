@@ -1,5 +1,6 @@
 import ckan.plugins.toolkit as tk
 from ckan import plugins as p
+from ckan.common import CKANConfig
 
 
 @tk.blanket.helpers
@@ -13,7 +14,7 @@ class ScientometricsPlugin(p.SingletonPlugin):
 
     # IConfigurer
 
-    def update_config(self, config_):
+    def update_config(self, config_: CKANConfig):
         tk.add_template_directory(config_, "templates")
         tk.add_public_directory(config_, "public")
         tk.add_resource("assets", "scientometrics")

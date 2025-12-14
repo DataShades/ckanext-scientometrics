@@ -1,2 +1,2 @@
-{% set google_scholar_author_id = data.get("scientometrics", {}).google_scholar_author_id or "" %}
+{% set google_scholar_author_id = data.get("scim", {}).google_scholar_author_id or "" %}
 {{ form.input('google_scholar_author_id', label=_('Google Scholar Author ID'), id='field-google-author-scholar-id', value=google_scholar_author_id, error=errors.google_scholar_author_id, placeholder=_('eg. abababaBABAB'), classes=['control-medium'], is_required=false) }}

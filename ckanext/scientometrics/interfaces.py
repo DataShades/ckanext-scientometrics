@@ -6,7 +6,7 @@ from ckanext.scientometrics.metrics_extractors import AuthorMetricsExtractor
 
 
 class IScientometrics(Interface):
-    def get_metrics_extractors(self) -> dict[str, AuthorMetricsExtractor]:
+    def get_metrics_extractors(self) -> dict[str, type[AuthorMetricsExtractor]]:
         """Allows to redefine the default metrics extractors.
 
         Default:
