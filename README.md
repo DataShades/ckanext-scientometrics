@@ -1,4 +1,4 @@
-[![Tests](https://github.com/aleks-iv/ckanext-scientometrics/workflows/Tests/badge.svg?branch=main)](https://github.com/aleks-iv/ckanext-scientometrics/actions)
+[![Tests](https://github.com/DataShades/ckanext-scientometrics/actions/workflows/test.yml/badge.svg)](https://github.com/DataShades/ckanext-scientometrics/actions/workflows/test.yml)
 
 # ckanext-scientometrics
 
@@ -126,7 +126,7 @@ To install ckanext-scientometrics:
 2. Clone the source and install it on the virtualenv:
 
    ```bash
-   git clone https://github.com/aleks-iv/ckanext-scientometrics.git
+   git clone https://github.com/DataShades/ckanext-scientometrics.git
    cd ckanext-scientometrics
    pip install -e .
    pip install -r requirements.txt
@@ -165,7 +165,7 @@ ckanext.scientometrics.show_on_user_page = true
 To install for development:
 
 ```bash
-git clone https://github.com/aleks-iv/ckanext-scientometrics.git
+git clone https://github.com/DataShades/ckanext-scientometrics.git
 cd ckanext-scientometrics
 pip install -e .
 pip install -r dev-requirements.txt
